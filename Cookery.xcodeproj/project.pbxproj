@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0E83A2B121D93FE500A8B2BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83A2B021D93FE500A8B2BB /* AppDelegate.swift */; };
-		0E83A2B321D93FE500A8B2BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83A2B221D93FE500A8B2BB /* ViewController.swift */; };
 		0E83A2B621D93FE500A8B2BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E83A2B421D93FE500A8B2BB /* Main.storyboard */; };
 		0E83A2B821D93FE700A8B2BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E83A2B721D93FE700A8B2BB /* Assets.xcassets */; };
 		0E83A2BB21D93FE700A8B2BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E83A2B921D93FE700A8B2BB /* LaunchScreen.storyboard */; };
 		0E83A2C621D93FE700A8B2BB /* CookeryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83A2C521D93FE700A8B2BB /* CookeryTests.swift */; };
 		0E83A2D121D93FE800A8B2BB /* CookeryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83A2D021D93FE800A8B2BB /* CookeryUITests.swift */; };
+		0E83A2DF21D9423F00A8B2BB /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83A2DE21D9423F00A8B2BB /* ItemsViewController.swift */; };
+		0E83A2E121D9474300A8B2BB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83A2E021D9474300A8B2BB /* Item.swift */; };
+		0E83A2E321D94EA300A8B2BB /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83A2E221D94EA300A8B2BB /* ItemStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		0E83A2AD21D93FE500A8B2BB /* Cookery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cookery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E83A2B021D93FE500A8B2BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0E83A2B221D93FE500A8B2BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0E83A2B521D93FE500A8B2BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E83A2B721D93FE700A8B2BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E83A2BA21D93FE700A8B2BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		0E83A2CC21D93FE700A8B2BB /* CookeryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookeryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E83A2D021D93FE800A8B2BB /* CookeryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookeryUITests.swift; sourceTree = "<group>"; };
 		0E83A2D221D93FE800A8B2BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E83A2DE21D9423F00A8B2BB /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		0E83A2E021D9474300A8B2BB /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		0E83A2E221D94EA300A8B2BB /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +101,10 @@
 		0E83A2AF21D93FE500A8B2BB /* Cookery */ = {
 			isa = PBXGroup;
 			children = (
+				0E83A2E021D9474300A8B2BB /* Item.swift */,
+				0E83A2E221D94EA300A8B2BB /* ItemStore.swift */,
+				0E83A2DE21D9423F00A8B2BB /* ItemsViewController.swift */,
 				0E83A2B021D93FE500A8B2BB /* AppDelegate.swift */,
-				0E83A2B221D93FE500A8B2BB /* ViewController.swift */,
 				0E83A2B421D93FE500A8B2BB /* Main.storyboard */,
 				0E83A2B721D93FE700A8B2BB /* Assets.xcassets */,
 				0E83A2B921D93FE700A8B2BB /* LaunchScreen.storyboard */,
@@ -256,7 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E83A2B321D93FE500A8B2BB /* ViewController.swift in Sources */,
+				0E83A2DF21D9423F00A8B2BB /* ItemsViewController.swift in Sources */,
+				0E83A2E121D9474300A8B2BB /* Item.swift in Sources */,
+				0E83A2E321D94EA300A8B2BB /* ItemStore.swift in Sources */,
 				0E83A2B121D93FE500A8B2BB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +443,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MVUEH22TXZ;
 				INFOPLIST_FILE = Cookery/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,6 +462,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MVUEH22TXZ;
 				INFOPLIST_FILE = Cookery/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
