@@ -23,7 +23,7 @@ class Item: NSObject {
     
     convenience init (random: Bool = false ) {
         if random {
-            let dishNames = ["Pizza", "Salsa of Life", "Lobster Bisque"]
+            let dishNames = ["Pizza", "Salsa that Changed Your Life", "Lobster Bisque"]
             let dishCategory = ["Bread", "Salsas", "Main Dishes"]
             
             var idx = arc4random_uniform( UInt32(dishNames.count))
