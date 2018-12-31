@@ -16,6 +16,7 @@
 		0E83A2DF21D9423F00A8B2BB /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83A2DE21D9423F00A8B2BB /* ItemsViewController.swift */; };
 		0E83A2E121D9474300A8B2BB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83A2E021D9474300A8B2BB /* Item.swift */; };
 		0E83A2E321D94EA300A8B2BB /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83A2E221D94EA300A8B2BB /* ItemStore.swift */; };
+		0E83A2E521D9CB7600A8B2BB /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83A2E421D9CB7600A8B2BB /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		0E83A2DE21D9423F00A8B2BB /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		0E83A2E021D9474300A8B2BB /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		0E83A2E221D94EA300A8B2BB /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		0E83A2E421D9CB7600A8B2BB /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +103,10 @@
 		0E83A2AF21D93FE500A8B2BB /* Cookery */ = {
 			isa = PBXGroup;
 			children = (
-				0E83A2E021D9474300A8B2BB /* Item.swift */,
-				0E83A2E221D94EA300A8B2BB /* ItemStore.swift */,
 				0E83A2DE21D9423F00A8B2BB /* ItemsViewController.swift */,
+				0E83A2E221D94EA300A8B2BB /* ItemStore.swift */,
+				0E83A2E021D9474300A8B2BB /* Item.swift */,
+				0E83A2E421D9CB7600A8B2BB /* ItemCell.swift */,
 				0E83A2B021D93FE500A8B2BB /* AppDelegate.swift */,
 				0E83A2B421D93FE500A8B2BB /* Main.storyboard */,
 				0E83A2B721D93FE700A8B2BB /* Assets.xcassets */,
@@ -266,6 +269,7 @@
 				0E83A2E121D9474300A8B2BB /* Item.swift in Sources */,
 				0E83A2E321D94EA300A8B2BB /* ItemStore.swift in Sources */,
 				0E83A2B121D93FE500A8B2BB /* AppDelegate.swift in Sources */,
+				0E83A2E521D9CB7600A8B2BB /* ItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
