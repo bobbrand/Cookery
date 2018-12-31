@@ -80,6 +80,7 @@
                                 <connections>
                                     <outlet property="dishCategoryLabel" destination="ici-72-Kev" id="GfF-XG-2XD"/>
                                     <outlet property="dishNameLabel" destination="ijL-ps-QW1" id="8QY-EY-IVZ"/>
+                                    <segue destination="yym-ID-Bh5" kind="show" identifier="showItem" id="c9X-ws-Vl7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -94,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="232.80000000000001" y="113.79310344827587"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="QR4-S7-ZSg">
             <objects>
-                <viewController id="yym-ID-Bh5" sceneMemberID="viewController">
+                <viewController id="yym-ID-Bh5" customClass="DetailViewController" customModule="Cookery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6rv-OO-tdd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -160,6 +161,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2Rs-Is-5mm"/>
                     </view>
+                    <connections>
+                        <outlet property="categoryNameField" destination="8ox-Zt-BLU" id="Y7k-dZ-Mzv"/>
+                        <outlet property="dateLabel" destination="cmq-dG-cTF" id="Mq7-WK-k60"/>
+                        <outlet property="dishNameField" destination="CU1-84-MsA" id="rBV-8O-I2a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PaY-2d-5sQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
