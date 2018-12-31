@@ -97,7 +97,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CU1-84-MsA">
                                                 <rect key="frame" x="79.5" y="0.0" width="279.5" height="30"/>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="yym-ID-Bh5" id="dHH-rp-MDN"/>
@@ -114,10 +114,10 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ox-Zt-BLU">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ox-Zt-BLU">
                                                 <rect key="frame" x="79.5" y="0.0" width="279.5" height="30"/>
                                                 <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="yym-ID-Bh5" id="rnQ-iH-yax"/>
@@ -126,24 +126,44 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="749" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmq-dG-cTF">
-                                        <rect key="frame" x="0.0" y="76" width="359" height="467"/>
+                                        <rect key="frame" x="0.0" y="76" width="359" height="20.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="748" translatesAutoresizingMaskIntoConstraints="NO" id="072-CT-ZSD">
+                                        <rect key="frame" x="0.0" y="104.5" width="359" height="438.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="8ox-Zt-BLU" firstAttribute="leading" secondItem="CU1-84-MsA" secondAttribute="leading" id="RPL-xe-Xma"/>
                                 </constraints>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TAC-yf-dfR">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="x0P-1B-5Ag"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="umu-dJ-66d">
+                                        <connections>
+                                            <action selector="takePicture:" destination="yym-ID-Bh5" id="Xtj-g8-cPU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="emf-fA-K4N" firstAttribute="top" secondItem="2Rs-Is-5mm" secondAttribute="top" constant="8" id="3bM-Iw-GNP"/>
+                            <constraint firstAttribute="trailing" secondItem="TAC-yf-dfR" secondAttribute="trailing" id="7Iw-M9-BjK"/>
+                            <constraint firstItem="TAC-yf-dfR" firstAttribute="leading" secondItem="6rv-OO-tdd" secondAttribute="leading" id="7eY-52-UGb"/>
                             <constraint firstItem="emf-fA-K4N" firstAttribute="leading" secondItem="2Rs-Is-5mm" secondAttribute="leading" constant="8" id="GFS-ab-n7O"/>
                             <constraint firstItem="2Rs-Is-5mm" firstAttribute="trailing" secondItem="emf-fA-K4N" secondAttribute="trailing" constant="8" id="Ltc-hN-8Hf"/>
-                            <constraint firstItem="2Rs-Is-5mm" firstAttribute="bottom" secondItem="emf-fA-K4N" secondAttribute="bottom" constant="8" id="Wkj-vU-R34"/>
+                            <constraint firstAttribute="bottom" secondItem="TAC-yf-dfR" secondAttribute="bottom" id="MxY-BO-A69"/>
+                            <constraint firstItem="TAC-yf-dfR" firstAttribute="top" secondItem="emf-fA-K4N" secondAttribute="bottom" constant="8" id="SgA-Ce-zEt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2Rs-Is-5mm"/>
                         <connections>
@@ -156,6 +176,7 @@
                         <outlet property="categoryNameField" destination="8ox-Zt-BLU" id="Y7k-dZ-Mzv"/>
                         <outlet property="dateLabel" destination="cmq-dG-cTF" id="Mq7-WK-k60"/>
                         <outlet property="dishNameField" destination="CU1-84-MsA" id="rBV-8O-I2a"/>
+                        <outlet property="recipeImageView" destination="072-CT-ZSD" id="wdl-We-jpv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PaY-2d-5sQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
