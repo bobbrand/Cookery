@@ -54,24 +54,25 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="DishCategoryLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ici-72-Kev">
-                                            <rect key="frame" x="213" y="26" width="146" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DishNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijL-ps-QW1">
+                                            <rect key="frame" x="26" y="26" width="120.5" height="20"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DishNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijL-ps-QW1">
-                                            <rect key="frame" x="22" y="26" width="120.5" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="DishCategoryLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ici-72-Kev">
+                                            <rect key="frame" x="251" y="205" width="108" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="ijL-ps-QW1" firstAttribute="leading" secondItem="rgT-WQ-hah" secondAttribute="leadingMargin" constant="6" id="A5m-8G-47k"/>
+                                        <constraint firstItem="ijL-ps-QW1" firstAttribute="leading" secondItem="rgT-WQ-hah" secondAttribute="leadingMargin" constant="10" id="A5m-8G-47k"/>
+                                        <constraint firstAttribute="bottom" secondItem="ici-72-Kev" secondAttribute="bottom" constant="24" id="Jta-RQ-NAx"/>
                                         <constraint firstAttribute="trailing" secondItem="ici-72-Kev" secondAttribute="trailing" constant="16" id="TSg-px-JVt"/>
                                         <constraint firstItem="ijL-ps-QW1" firstAttribute="top" secondItem="rgT-WQ-hah" secondAttribute="topMargin" constant="15" id="d5a-1G-E0Z"/>
-                                        <constraint firstItem="ici-72-Kev" firstAttribute="top" secondItem="ijL-ps-QW1" secondAttribute="top" id="zax-WR-Psc"/>
+                                        <constraint firstItem="ici-72-Kev" firstAttribute="top" secondItem="ijL-ps-QW1" secondAttribute="bottom" constant="159" id="fcY-6E-iQo"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
