@@ -113,11 +113,11 @@
 				0E83A2E421D9CB7600A8B2BB /* ItemCell.swift */,
 				0E83A2B021D93FE500A8B2BB /* AppDelegate.swift */,
 				0E83A2E621DA74F500A8B2BB /* DetailViewController.swift */,
+				0E83A2EA21DAD2D500A8B2BB /* ImageStore.swift */,
 				0E83A2B421D93FE500A8B2BB /* Main.storyboard */,
 				0E83A2B721D93FE700A8B2BB /* Assets.xcassets */,
 				0E83A2B921D93FE700A8B2BB /* LaunchScreen.storyboard */,
 				0E83A2BC21D93FE700A8B2BB /* Info.plist */,
-				0E83A2EA21DAD2D500A8B2BB /* ImageStore.swift */,
 			);
 			path = Cookery;
 			sourceTree = "<group>";

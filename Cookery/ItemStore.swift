@@ -20,7 +20,6 @@ class ItemStore {
         return documentDirectory.appendingPathComponent("items.archive")
     }()
     
-    
     // MARK: - Initializer
     
     // Get all of the items out of the file system

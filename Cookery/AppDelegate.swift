@@ -15,8 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let itemStore = ItemStore()
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions
+            launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch
         
         // Create an ImageStore
@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if(success) {
             print("Saved all of the items.")
         } else {
-            print("Could not save any of the items.")
+            print("Could not save all of the items.")
         }
     }
 
