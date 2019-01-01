@@ -12,8 +12,10 @@ class ItemsViewController: UITableViewController {
     
     // MARK: - Objects
     var itemStore: ItemStore!
+    var imageStore: ImageStore!
     
     // MARK:  - Initializers
+    // This is a way to get the left button bar on the nav controller to functional like an edit button
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         navigationItem.leftBarButtonItem = editButtonItem
@@ -44,7 +46,24 @@ class ItemsViewController: UITableViewController {
                 let item = itemStore.allItems[row]
                 let detailViewController = segue.destination as! DetailViewController
                 detailViewController.item = item
+                detailViewController.imageStore = imageStore
             }
+        case "addItem"?:
+            // Create a new item
+            let newItem = itemStore.createItem()
+            
+            // Determine where that item is in the array
+            if let index = itemStore.allItems.index(of: newItem) {
+                let indexPath = IndexPath(row: index, section: 0)
+                
+                // Insert this new row into the table
+                tableView.insertRows(at: [indexPath], with: .automatic)
+            }
+            // Launch the detail view controller so that we can edit it
+            let detailViewController = segue.destination as! DetailViewController
+            detailViewController.item = newItem
+            detailViewController.imageStore = imageStore
+            
         default:
             preconditionFailure("Unexpected segue identifier.")
         }
@@ -92,6 +111,9 @@ class ItemsViewController: UITableViewController {
                 (action) -> Void in
                 // Remove the item from the store
                 self.itemStore.removeItem(item)
+                
+                // Remove the items images from the image store
+                self.imageStore.deleteImage(forKey: item.itemKey)
                 
                 // Also remove that row from the table view with an animation
                 self.tableView.deleteRows(at: [indexPath], with: .automatic )

@@ -16,17 +16,20 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var recipeImageView: UIImageView!
     
-    // MARK: - Actions
-    @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
-        view.endEditing(true)
-    }
-    
+
     var item: Item! {
         didSet {
             navigationItem.title = item.dishName
         }
     }
+    var imageStore: ImageStore!
+
     
+    // MARK: - Actions
+    @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+
     @IBAction func takePicture(_ sender: UIBarButtonItem) {
         let imagePicker = UIImagePickerController()
         
@@ -44,7 +47,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     }
   
     // MARK: - UIViewController Functions and Util
-
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
@@ -58,6 +60,14 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         dishNameField.text = item.dishName
         categoryNameField.text = item.dishCategory
         dateLabel.text = dateFormatter.string(from: item.dateCreated)
+        
+        // Get the item key
+        let key = item.itemKey
+        
+        // Check the store to see if there is an image associated with the item
+        // display it on the image view
+        let imageToDisplay = imageStore.image(forKey: key)
+        recipeImageView.image = imageToDisplay
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -82,6 +92,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         
         // Get a picked image from the info dictionary
         let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        
+        // Store the image in the imageStore for the item's key
+        imageStore.setImage(image, forKey: item.itemKey)
         
         // Put the image on the screen in the image view
         recipeImageView.image = image

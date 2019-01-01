@@ -66,6 +66,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="d35-z6-skg">
                             <connections>
                                 <action selector="addNewItem:" destination="hKp-3w-IPZ" id="TB6-tN-fUx"/>
+                                <segue destination="yym-ID-Bh5" kind="show" identifier="addItem" id="oE8-dw-pw1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -211,4 +212,7 @@
             <point key="canvasLocation" x="232.80000000000001" y="113.79310344827587"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="oE8-dw-pw1"/>
+    </inferredMetricsTieBreakers>
 </document>

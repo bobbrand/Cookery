@@ -12,11 +12,31 @@ class ItemStore {
     
     var allItems = [Item]()
     
+    // Get a file system URL for the app's document folder in the sandbox
+    let itemArchiveURL: URL = {
+        let documentsDirectories =
+            FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentDirectory = documentsDirectories.first!
+        return documentDirectory.appendingPathComponent("items.archive")
+    }()
+    
+    
+    // MARK: - Initializer
+    
+    // Get all of the items out of the file system
+    init() {
+        if let archivedItems =
+            NSKeyedUnarchiver.unarchiveObject(withFile: itemArchiveURL.path) as? [Item] {
+            allItems = archivedItems
+        }
+    }
+    
+    // MARK: - Actions
+    
+    // Create a blank item
     @discardableResult func createItem() -> Item {
-        let newItem = Item(random: true)
-        
+        let newItem = Item(dishName: " ", dishCategory: " ")
         allItems.append(newItem)
-        
         return(newItem)
     }
     
@@ -39,5 +59,10 @@ class ItemStore {
         
         // Insert item in array at new location
         allItems.insert(movedItem, at: toIndex)
+    }
+    
+    func saveChanges() -> Bool {
+        print("Saving items to: \(itemArchiveURL.path)")
+        return NSKeyedArchiver.archiveRootObject(allItems, toFile: itemArchiveURL.path)
     }
 }
